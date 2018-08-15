@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+
+    <script src="https://www.gstatic.com/firebasejs/5.3.1/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+var config = {
+    apiKey: "AIzaSyA5Gz8kbunLQeTUY9YZ0fMT0DptNjFPIkY",
+    authDomain: "rpsproject-14115.firebaseapp.com",
+    databaseURL: "https://rpsproject-14115.firebaseio.com",
+    projectId: "rpsproject-14115",
+    storageBucket: "rpsproject-14115.appspot.com",
+    messagingSenderId: "952475070552"
+  };
+  firebase.initializeApp(config);
+    </script>
+
+    <title>Rock Paper Scissors</title>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row-12">
+            <div class="jumbotron jumbotron-fluid">
+                <div class="container">
+                    <h1 class="display-4">Rock Paper Scissors</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row" id="teamSelect">
+        <div class="col-1"></div>
+        <div class="col player1ready" id="selectPlayer1" style="text-align: center">Pick Player 1</div>
+        <div class="col player2ready" id="selectPlayer2" style="text-align: center">Pick Player 2</div>
+        <div class="col-1"></div>
+    </div>
+    <div class="row">
+        <div class="col" style="text-align: center">
+            Your Choice</div>
+    </div>
+    <div class="row">
+        <div class="col-3"></div>
+        <div class="col-2">
+            <img id="p1Image" style="width: 100%">
+        </div>
+        <div class="col-2">
+            <td>
+                <button id="rock" style="width:100%">Rock</button>
+            </td>
+            <td>
+                <button id="paper" style="width:100%">Paper</button>
+            </td>
+            <td>
+                <button id="scissors" style="width:100%">Scissors</button>
+            </td>
+        </div>
+        <div class="col-2">
+            <img id="p2Image" style="width: 100%">
+        </div>
+        <div class="col-3"></div>
+
+    </div>
+    <div class="row">
+        <div class="col-3"></div>
+        <div class="col-2">
+            <div style="display: inline;" id="p1win"></div>
+            <div style="display: inline;"> - </div>
+            <div style="display: inline;" id="p1loss"></div>
+            <div style="display: inline;"> - </div>
+            <div style="display: inline;" id="p1tie"></div>
+        </div>
+        <div class="col-3"></div>
+        <div class="col-2">
+            <div style="display: inline;" id="p2win"></div>
+            <div style="display: inline;"> - </div>
+            <div style="display: inline;" id="p2loss"></div>
+            <div style="display: inline;"> - </div>
+            <div style="display: inline;" id="p2tie"></div>
+        </div>
+        <div class="col-2"></div>
+    </div>
+
+    <div class="row">
+            <div class="col-5"></div>
+        <div class="col-2">
+            <button id="playAgainBtn" style="width: 100%" >Play Again</button>
+        </div>
+        <div class="col-5"></div>
+
+
+    </div>
+    </div>
+    </div>
+    </div>
+    <script src="assets/js/logic.js"></script>
+</body>
+
+</html>
